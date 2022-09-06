@@ -1,0 +1,184 @@
+:root {
+	--primary-color: #2ba7df;
+    --second-color: rgba(0,0,0,0.7);
+}
+/******************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title 
+{
+    text-align: center;
+    margin-top: 50px; 
+}
+.title h2 strong
+{
+    text-transform: uppercase;
+}
+.title h4
+{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px var(--second-color);
+}
+.title p
+{
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    font-size: 21px;
+}
+.wrapper{
+    margin: 0 0;
+    padding: 50px 0;
+    margin-bottom: 100px;
+    position: relative;
+}
+.wrapper .center-line{
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: var(--second-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wrapper .rows{
+    display: flex;
+    color: white;
+    
+}
+.wrapper .rows-1{
+    justify-content: flex-start;
+}
+.wrapper .rows-2{
+    justify-content: flex-end;
+}
+.wrapper .rows section{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+    height: auto;
+    margin-top: 50px;
+}
+.wrapper .rows section::before
+{
+    position: absolute;
+    content: "";
+    top: 20px;
+    height: 15px;
+    width: 15px;
+    background: var(--primary-color);
+    z-index: -1;
+    transform: rotate(45deg);
+} 
+.wrapper .rows-1 section::before
+{
+    right: -7px;
+}
+ .wrapper .rows-2 section::before
+{
+    left: -7px;
+} 
+.wrapper .rows section .icone,.wrapper .center-line .center-icone
+{
+    position: absolute;
+    background: var(--primary-color);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 1px  4px #fff, inset 2px 2px 2px rgba(0,0,0,0.08);
+    font-size: 20px;
+}
+.wrapper .rows-1 section .icone
+{
+    right: -60px;
+    top: 10px;
+    
+}
+.wrapper .rows-2 section .icone
+{
+    top: 8px;
+    left: -60px;
+}
+.wrapper .center-line .center-icone
+{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wrapper  .title-wer
+{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+.wrapper  .title-wer span
+{
+    background-color: var(--second-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--second-color);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.wrapper .rows section::after
+{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100px;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    transform:  rotate(45deg) translateY(35px);
+}
+@media (max-width: 575px) {
+    .wrapper{
+    margin: 50px 0;
+}
+.wrapper .center-line,
+.wrapper .rows section::before,
+.wrapper .center-line .center-icone,
+.wrapper .icone
+{
+    display: none;
+}
+.wrapper .rows
+{
+    margin: 10px 0  ;
+}
+.wrapper .rows section{
+    width: 100%;
+    overflow: hidden;
+}
+.title 
+{
+    margin-bottom: -100px; 
+}
+}
+@media ( min-width: 576px ) and (max-width: 767px) {
+.wrapper .center-line,
+.wrapper .rows section::before,
+.wrapper .center-line .center-icone,
+.wrapper .icone
+{
+    display: none;
+}
+.wrapper .rows
+{
+    margin: 10px 0  ;
+}
+.wrapper .rows section{
+    width: 100%;
+}
+}
